@@ -1,0 +1,17 @@
+name: Workflow Run Combinado
+run-name: Running - Workflow Combinado
+
+on:
+  workflow_run:
+    workflows: ["Trigger"]
+    types:
+      - requested
+      - in_progress
+      - completed
+
+jobs:
+  basic-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: comentário
+        run: echo "Workflow run combinado foi triggado"
