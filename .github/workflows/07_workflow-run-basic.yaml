@@ -1,0 +1,13 @@
+name: Workflow Run Basic
+run-name: Running - Workflow Run Basic
+
+on:
+  workflow_run:
+    workflows: ["Trigger"]
+
+jobs:
+  basic-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: comentário
+        run: echo "Workflow run basic foi triggado"
